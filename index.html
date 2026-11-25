@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Horsenet — horsenet.net</title>
+  <meta name="description" content="The Horsenet — home page. Coming soon. Customize me with horsenet.net's real content." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🐴%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav">
+      <div class="brand">🐴 The Horsenet</div>
+      <a class="cta-btn" href="#join">Get started</a>
+    </nav>
+    <div class="hero-inner">
+      <h1>Welcome to <span class="accent">The Horsenet</span></h1>
+      <p class="tagline">A place for the community. Under construction — we'll be up soon.</p>
+      <div class="hero-actions">
+        <a class="cta-btn large" href="#join">Join now</a>
+        <a class="cta-btn ghost large" href="#about">Learn more</a>
+      </div>
+      <p class="domain-hint">served at <code>horsenet.net</code></p>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" class="section">
+      <h2>About</h2>
+      <p class="lead">
+        This is the starter homepage for <strong>horsenet.net</strong>, built on GitHub Pages.
+        Tell the agent what the site is for and the content below will be replaced with real pages.
+      </p>
+    </section>
+
+    <section id="features" class="section section-alt">
+      <h2>What's next</h2>
+      <div class="cards">
+        <article class="card">
+          <div class="card-icon">📄</div>
+          <h3>Pages</h3>
+          <p>Home, about, and content pages tailored to the site's topic.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">🔗</div>
+          <h3>Connected</h3>
+          <p>Custom domain, HTTPS enforced, and auto-rebuilt on every push.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">🛠️</div>
+          <h3>Agent-controlled</h3>
+          <p>Ask the agent to add content; each change publishes automatically.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="join" class="section">
+      <h2>Get started</h2>
+      <p class="lead">The site is live on the plumbing stage. Next up: real content.</p>
+      <a class="cta-btn large" href="#about">See what's next</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> The Horsenet &middot; horsenet.net</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
