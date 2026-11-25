@@ -19,15 +19,19 @@ rebuilds and republishes the site — no build step required (pure static HTML/C
 
 ## Custom domain (horsenet.net via Cloudflare)
 
-1. In GitHub: repo **Settings → Pages → Custom domain** → set `horsenet.net` → Save.
+1. In GitHub: Pages is **already enabled** and the custom domain `horsenet.net`
+   is **already set** — GitHub auto-detected it from the `CNAME` file.
 2. In Cloudflare: add DNS records for `horsenet.net`, set them to **DNS-only**
-   (grey cloud) so GitHub can issue the HTTPS certificate:
+   (grey cloud) so GitHub can issue the HTTPS certificate. Orange/cloud-proxied
+   records block the certificate:
    - A `@` → `185.199.108.153`
    - A `@` → `185.199.109.153`
    - A `@` → `185.199.110.153`
    - A `@` → `185.199.111.153`
-   - CNAME `www` → `Lowebrew.github.io`
-3. Wait a few minutes, then enable **Enforce HTTPS** in the Pages settings.
+   - (optional) CNAME `www` → `horsenet.net`
+3. Once the records propagate, `horsenet.net` resolves to the site. GitHub
+   provisions the HTTPS certificate automatically after DNS is live, so no manual
+   "Enforce HTTPS" step is needed — the agent verifies it live and confirms.
 
 ## Maintained by Hermes
 
