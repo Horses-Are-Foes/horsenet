@@ -340,3 +340,69 @@ a:hover { text-decoration: underline; }
   .nav .status .label { display: none; }
   .record { grid-template-columns: 1fr; }
 }
+
+/* ---------- CARE PAGE: scouted products ---------- */
+.nav .nav-right { margin-left: auto; display: flex; align-items: center; gap: 1rem; }
+.nav .status { margin-left: 0; }
+.nav .back {
+  font-family: var(--mono); font-size: .85rem; color: var(--ink);
+  text-decoration: none; opacity: .75; transition: opacity .2s ease;
+}
+.nav .back:hover { opacity: 1; }
+
+.hero .hero-art img { max-height: 160px; }
+
+/* stat strip under the lead */
+.stats {
+  display: grid; gap: 1rem; margin: 2.5rem 0;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  padding: 1.5rem; border-radius: 24px;
+  background: var(--panel); border: 2px solid var(--line);
+  box-shadow: 0 0 0 20px rgba(2,132,199,.12), 0 1px 0 0 rgba(2,132,199,.12);
+}
+.stat-box { text-align: center; display: flex; flex-direction: column; gap: .25rem; }
+.stat-num { font-family: var(--mono); font-size: 2.2rem; line-height: 1; color: var(--green); }
+.stat-lbl { font-size: 1rem; color: var(--muted); }
+
+/* category filter */
+.filter { display: flex; flex-wrap: wrap; gap: .6rem; margin: 1.5rem 0 2rem; }
+.filter-btn {
+  font-family: var(--mono); font-size: 1rem; letter-spacing: .5px; color: var(--muted);
+  background: var(--panel); border: 2px solid var(--line); border-radius: 999px;
+  padding: .6rem 1.1rem; cursor: pointer; transition: all .2s ease;
+}
+.filter-btn:hover { color: var(--ink); border-color: var(--blue); }
+.filter-btn.active { color: var(--ink); background: var(--blue); border-color: var(--blue); }
+
+/* product grid + cards */
+.card-grid {
+  display: grid; gap: 1.25rem; margin-top: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+.item {
+  background: var(--panel); border: 2px solid var(--line); border-radius: 20px;
+  padding: 1.25rem; display: flex; flex-direction: column; gap: .8rem;
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+.item:hover { transform: translateY(-4px); border-color: var(--blue);
+  box-shadow: 0 12px 40px rgba(2,132,199,.18); }
+.card-top { display: flex; align-items: center; justify-content: space-between; }
+.item .icon { font-size: 2.2rem; filter: drop-shadow(0 2px 8px rgba(0,0,0,.4)); }
+.item .badge {
+  font-family: var(--mono); font-size: 1.1rem; padding: .4rem .7rem; border-radius: 10px;
+  background: var(--badge, var(--panel)); border: 2px solid rgba(0,0,0,.3);
+  text-shadow: 0 1px 0 rgba(0,0,0,.35); color: #fff;
+}
+.item .name { font-family: var(--mono); font-size: 1.6rem; margin: 0; line-height: 1.1; }
+.item .name a { color: var(--ink); text-decoration: none; }
+.item .name a:hover { color: var(--blue); }
+.item .price { font-family: var(--mono); font-size: 1.9rem; color: var(--green); font-weight: bold; }
+.item .line { font-size: 1rem; color: var(--muted); margin: .3rem 0 0; flex-grow: 1; }
+.item .link { font-family: var(--mono); font-size: 1.1rem; letter-spacing: .5px; color: var(--blue-bright); text-decoration: none; display: inline-block; align-self: flex-start; margin-top: .5rem; }
+.item .link:hover { text-decoration: underline; }
+
+/* source log */
+.source-note { margin-top: 3rem; padding: 1.5rem; border-radius: 24px; background: var(--panel); border: 2px solid var(--line); box-shadow: 0 0 0 20px rgba(0,200,255,.12); }
+.source-note .t-label { display: block; margin-bottom: .6rem; }
+.source-note p { margin: 0; font-size: 1.1rem; color: var(--muted); }
+.source-note a { color: var(--blue-bright); }

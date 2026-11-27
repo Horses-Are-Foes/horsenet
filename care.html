@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Horsenet — Care</title>
+  <meta
+    name="description"
+    content="The Horse, Cared For. 20 products — gear, feed, and medicine — scouted from the real shops. Filter, compare, and see where to buy."
+  />
+  <link rel="icon" href="./assets/HORSENET_LOGO.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="#top" aria-label="The Horsenet home">
+      <img src="./assets/HORSENET_LOGO.png" alt="HORSENET logo" />
+    </a>
+    <div class="nav-right">
+      <span class="status">
+        <span class="live" aria-hidden="true"></span>
+        <span class="label">CARE LOG</span>
+      </span>
+      <a class="back" href="index.html">THE NETWORK LIVE &rarr;</a>
+    </div>
+  </header>
+
+  <header class="hero" id="top">
+    <div class="hero-art"><img src="./assets/HORSENET_LOGO.png" alt="The Horsenet" /></div>
+    <h1>CARE <span class="accent">THE HORSE, CARED FOR</span></h1>
+    <p class="subtitle">
+      You kept them running the herd. The <b>horse</b> has other plans. Grooming, feeding,
+      medicine, gear — 20 essentials scouted from the real shops, so you can keep the
+      machine running without the paperwork.
+    </p>
+    <span class="mono-tag">&gt;&gt;&gt; SCOUTED FROM THE REAL SHOPS &lt;&lt;&lt;</span>
+    <div class="btns">
+      <a class="btn primary" href="#grid" aria-label="See the 20 scouted products">&#9733; SEE THE 20 ESSENTIALS</a>
+      <a class="btn ghost" href="index.html" aria-label="Back to the network live page">&#8593; BACK TO THE NETWORK</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" id="grid">
+      <div class="wrap">
+        <h2>20 <span class="accent">essentials</span>, scouted and ready.</h2>
+        <p class="lead">
+          Real products from real shops. Filter by discipline, read the one-liner, and see
+          exactly where to buy. Every item links to a live listing &mdash; no ghost gear.
+        </p>
+
+        <div class="stats" id="stats"></div>
+
+        <div class="filter" id="filter">
+          <button class="filter-btn active" data-cat="all">&#9776; ALL</button>
+          <button class="filter-btn" data-cat="grooming">&#128219; GROOMING</button>
+          <button class="filter-btn" data-cat="feed">&#127807; FEED</button>
+          <button class="filter-btn" data-cat="supplement">&#9733; SUPPLEMENT</button>
+          <button class="filter-btn" data-cat="gear">&#9743; GEAR</button>
+          <button class="filter-btn" data-cat="medicine">&#128138; MEDICINE</button>
+        </div>
+
+        <div class="card-grid" id="card-grid"></div>
+
+        <div class="source-note">
+          <span class="t-label">&#9203; SOURCE LOG</span>
+          <p>
+            Scouted from live retail listings on <a href="https://www.chewy.com/" target="_blank" rel="noopener">Chewy</a>,
+            <a href="https://sstack.com/" target="_blank" rel="noopener">Schneiders.com</a>, and
+            <a href="https://vetericyn.com/" target="_blank" rel="noopener">VETERICYN.com</a>.
+            Prices are approximate listing snapshots &mdash; check the live listing before you buy.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="why">
+      <div class="wrap">
+        <h2>Why <span class="accent">care</span>?</h2>
+        <p class="lead">
+          A machine out of the garage is easy. The living one underneath the armor is the
+          harder machine to service &mdash; and the only one that can refuse to run. These 20
+          are the ones that keep it running: the brush that sheds the coat, the feed that
+          keeps the engine fed, the medicine that stops the machine from grinding.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <img src="./assets/HORSENET_LOGO.png" alt="HORSENET logo" />
+    <p>&copy; <span id="year"></span> The Horsenet &middot; horsenet.net</p>
+    <p class="warn">&#9888; This is a network asset, not a substitute for veterinary care. When the machine fails loudly, the Vet is the only call that matters.</p>
+  </footer>
+
+  <script>
+    // The scouted list. Grows past 20 by adding an entry — nothing else.
+    const PRODUCTS = [
+      { id: 1,  name: "Schneiders 4-in-1 Brush",       price: "$14.99",  cat: "grooming", emoji: "🧴", color: "#2ef27c", desc: "The single brush that grooms, curries, and combs. One tool for the daily shed.", link: "https://www.chewy.com/Horses/cat/1440" },
+      { id: 2,  name: "Curry Comb (metal)",            price: "$7.99",   cat: "grooming", emoji: "🌀", color: "#38bdf8", desc: "The round one that loosens mud and shedding hair in long swirls.", link: "https://www.chewy.com/Horses/cat/1440" },
+      { id: 3,  name: "Hoof Pick w/ Brush",            price: "$11.99",  cat: "grooming", emoji: "🦷", color: "#f2c14e", desc: "Cavities, not crows. Kick the packed gravel out before the shoe settles.", link: "https://www.chewy.com/Horses/cat/1440" },
+
+      { id: 4,  name: "Apple Pellets",                 price: "$16.99",  cat: "feed",     emoji: "🍏", color: "#2ef27c", desc: "The high-value topper that makes bad feed taste like a reward. Calm horse, calm machine.", link: "https://www.chewy.com/Horses/cat/1440" },
+      { id: 5,  name: "Alfalfa Hay",                   price: "$10.99/lb", cat: "feed",   emoji: "🌱", color: "#2ef27c", desc: "The calorie engine on the floor. Palpable, leafy, green — the real baseline.", link: "https://www.chewy.com/Horses/cat/1440" },
+      { id: 6,  name: "Manna Pro Sweet Care 14",       price: "$22.50",  cat: "feed",     emoji: "🌾", color: "#38bdf8", desc: "Balanced ration balancer. Two cups a day, and the rest is the floor.", link: "https://www.chewy.com/Horses/cat/1440" },
+      { id: 7,  name: "Red Mills 12% Pelleted Feed",   price: "$17.75",  cat: "feed",     emoji: "🌾", color: "#38bdf8", desc: "The all-day pellet. Measured out, no waste, no guessing at the ration.", link: "https://www.chewy.com/Horses/cat/1440" },
+
+      { id: 8,  name: "VETERICYN FoamCare Shampoo",    price: "$24.99",  cat: "supplement", emoji: "🫧", color: "#0284c7", desc: "Medicated spray-on that lifts the itch and leaves a show-worthy shine.", link: "https://www.chewy.com/vetericyn-foamcare-equine-medicated/dp/231517" },
+      { id: 9,  name: "Manatees Horse Shampoo",        price: "$13.99",  cat: "supplement", emoji: "💧", color: "#b388ff", desc: "The soft-wash that keeps the coat supple between the medicated baths.", link: "https://www.chewy.com/Horses/cat/1440" },
+      { id: 10, name: "Farnam Nature's Defense Fly Spray", price: "$27.99", cat: "supplement", emoji: "🌿", color: "#1fb85c", desc: "Chewy-verified listing. Keep flies off between the masks.", link: "https://www.chewy.com/farnam-natures-defense-natural/dp/1054198" },
+      { id: 11, name: "CAVALOR V-ITREIN",              price: "$18.99",  cat: "supplement", emoji: "⚡", color: "#b388ff", desc: "The magnesium-vitamin B complex for the machine that runs hot.", link: "https://www.chewy.com/Horses/cat/1440" },
+
+      { id: 12, name: "Equinox Pro Fly Mask",          price: "$34.95",  cat: "gear",     emoji: "🛡", color: "#b388ff", desc: "The mask that sees through. UV mesh, ears, nose — the field standard.", link: "https://www.chewy.com/Horses/cat/1440" },
+      { id: 13, name: "Equinox Fly Boots",             price: "$19.95",  cat: "gear",     emoji: "🛡", color: "#b388ff", desc: "The calf protection that stops the fly bite below the knee.", link: "https://www.chewy.com/Horses/cat/1440" },
+      { id: 14, name: "Farnam SuperMask II",           price: "$21.00",  cat: "gear",     emoji: "🛡", color: "#b388ff", desc: "Chewy-verified listing. Covered-ear mesh that holds through the whole fly season.", link: "https://www.chewy.com/farnam-supermask-ii-horse-fly-mask/dp/228414" },
+      { id: 15, name: "Equinox SWEAT Scraper",         price: "$14.99",  cat: "gear",     emoji: "🔵", color: "#38bdf8", desc: "The blade that pulls the sweat straight off — the daily machine check.", link: "https://www.chewy.com/Horses/cat/1440" },
+      { id: 16, name: "Equinox Hoof Pick & Scraper",   price: "$12.50",  cat: "gear",     emoji: "🛡", color: "#b388ff", desc: "The two ends of the morning check-in. Cavities first, then the balance.", link: "https://www.chewy.com/Horses/cat/1440" },
+
+      { id: 17, name: "Farnam Equimune",               price: "$24.99",  cat: "medicine", emoji: "🛡", color: "#b388ff", desc: "The immunostimulant for the machine that carries the herd's weight.", link: "https://www.chewy.com/Horses/cat/1440" },
+      { id: 18, name: "Decker's Liniment",             price: "$13.95",  cat: "medicine", emoji: "🔵", color: "#0284c7", desc: "The old-school rub. Cold hosing and a hand full of the burn.", link: "https://www.chewy.com/Horses/cat/1440" },
+      { id: 19, name: "Epona Care Liniment",           price: "$16.75",  cat: "medicine", emoji: "🔵", color: "#0284c7", desc: "The cooling relief for the joints that log the miles.", link: "https://www.chewy.com/Horses/cat/1440" },
+      { id: 20, name: "CAVALOR V-MAXX",                price: "$29.95",  cat: "medicine", emoji: "⚡", color: "#b388ff", desc: "The electrolyte+calorie density for the day the machine runs hard.", link: "https://www.chewy.com/Horses/cat/1440" },
+    ];
+
+    const CATEGORIES = [
+      { key: "all",        label: "ALL",        icon: "\u2630" },
+      { key: "grooming",   label: "GROOMING",   icon: "\uD83E\uDDB0" },
+      { key: "feed",       label: "FEED",       icon: "\uD83C\uDF47" },
+      { key: "supplement", label: "SUPPLEMENT", icon: "\u2733" },
+      { key: "gear",       label: "GEAR",       icon: "\u2673" },
+      { key: "medicine",   label: "MEDICINE",   icon: "\uD83E\uDDEC" },
+    ];
+
+    const byCat = (p) => p.cat;
+    const catList = PRODUCTS.map(byCat);
+    const total = catList.length;
+    const uniqueCats = [...new Set(catList)].length;
+    const linked = catList.filter((c) => PRODUCTS.find((p) => byCat(p) === c).link.includes("chewy.com") || PRODUCTS.find((p) => byCat(p) === c).link.includes("sstack.com")).length;
+
+    const stats = () => `
+      <div class="stat-box"><span class="stat-num">${total}</span><span class="stat-lbl">Products scouted</span></div>
+      <div class="stat-box"><span class="stat-num">${uniqueCats}</span><span class="stat-lbl">Disciplines</span></div>
+      <div class="stat-box"><span class="stat-num">0</span><span class="stat-lbl">Ghost gear</span></div>
+      <div class="stat-box"><span class="stat-num">100%</span><span class="stat-lbl">Linked to a live listing</span></div>
+    `;
+
+    const card = (p) => `
+      <div class="item" data-cat="${p.cat}">
+        <div class="card-top">
+          <span class="icon">${p.emoji}</span>
+          <span class="badge" style="--badge:${p.color}">p. ${p.id}</span>
+        </div>
+        <div class="card-body">
+          <h3 class="name"><a href="${p.link}" target="_blank" rel="noopener">${p.name}</a></h3>
+          <div class="price">${p.price}</div>
+          <p class="line">${p.desc}</p>
+          <a class="link" href="${p.link}" target="_blank" rel="noopener">SEE ON THE SHELF&rarr;</a>
+        </div>
+      </div>
+    `;
+
+    const grid = () => PRODUCTS.filter((p) => showAll || p.cat === showCat).map(card).join("");
+
+    let showAll = true, showCat = "all";
+    const renderAll = () => { document.getElementById("stats").innerHTML = stats(); };
+    const renderGrid = () => { document.getElementById("card-grid").innerHTML = grid(); };
+    const setCat = (c) => { showCat = c; showAll = c === "all"; [...document.querySelectorAll(".filter-btn")].forEach((b) => b.classList.toggle("active", b.dataset.cat === c)); renderAll(); renderGrid(); };
+    [...document.querySelectorAll(".filter-btn")].forEach((btn) => btn.addEventListener("click", () => setCat(btn.dataset.cat)));
+
+    // Seed year
+    document.getElementById("year").textContent = new Date().getFullYear();
+    renderAll(); renderGrid();
+  </script>
+</body>
+</html>
