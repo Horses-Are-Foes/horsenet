@@ -94,7 +94,7 @@ a:hover { text-decoration: underline; }
   box-shadow: var(--shadow);
   background: var(--bg-2);
 }
-.hero-art img { display: block; width: 100%; height: auto; }
+.hero-art img { display: block; max-width: 100%; height: auto; }
 .hero h1 {
   font-size: clamp(1.9rem, 5vw, 3.1rem);
   line-height: 1.1;
@@ -350,7 +350,8 @@ a:hover { text-decoration: underline; }
 }
 .nav .back:hover { opacity: 1; }
 
-.hero .hero-art img { max-height: 160px; }
+/* small logo on the care page hero: keep it compact (aspect-safe via max-width) */
+.hero.compact-hero .hero-art img { max-height: 160px; }
 
 /* stat strip under the lead */
 .stats {
