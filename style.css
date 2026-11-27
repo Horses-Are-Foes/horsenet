@@ -351,7 +351,7 @@ a:hover { text-decoration: underline; }
 .nav .back:hover { opacity: 1; }
 
 /* small logo on the care page hero: keep it compact (aspect-safe via max-width) */
-.hero.compact-hero .hero-art img { max-height: 160px; }
+.compact-hero img { max-height: 160px; }
 
 /* stat strip under the lead */
 .stats {
