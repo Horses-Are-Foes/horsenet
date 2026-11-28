@@ -1,63 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Horsenet — a psychic horse who hates Horses Are Foes</title>
-  <meta name="description" content="The Horsenet — the worldwide network run by a psychic horse who opposes Horses Are Foes and horse hunters. Consider yourself warned." />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🐴%3C/text%3E%3C/svg%3E" />
-  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="The Horsenet">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Horsenet">
+  <meta property="og:image" content="https://horsenet.net/assets/HORSENET_LOGO.png">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="400">
+  <meta property="og:url" content="https://horsenet.net/">
+  <meta property="og:description" content="The Horsenet is a psychic horse who hates Horses Are Foes and Horse Hunters. Discover why horses should be feared and protected.">
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Horsenet">
+  <meta name="twitter:description" content="The Horsenet is a psychic horse who hates Horses Are Foes and Horse Hunters. Discover why horses should be feared and protected.">
+  <meta name="twitter:image" content="https://horsenet.net/assets/HORSENET_LOGO.png">
+  <!-- Description Meta Tag -->
+  <meta name="description" content="The Horsenet is a psychic horse who hates Horses Are Foes and Horse Hunters. Discover why horses should be feared and protected.">
 </head>
 <body>
-  <header class="nav">
-    <a class="brand" href="#top" aria-label="The Horsenet home">
-      <img src="./assets/HORSENET_LOGO.png" alt="HORSENET logo" />
-    </a>
-    <div class="nav-right">
-      <a class="back" href="care.html">CARE THE HORSE &rarr;</a>
-    </div>
-    <span class="status">
-      <span class="live" aria-hidden="true"></span>
-      <span class="label">NETWORK LIVE</span>
-    </span>
-  </header>
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
 
-  <header class="hero" id="top">
-    <div class="hero-art">
-      <img src="./assets/HORSENET_WARNING.png" alt="Horsenet Worldwide: irregular activity detected. Your information has been added to a database of antihorse terrorists." />
-    </div>
-    <h1>Welcome to <span class="accent">The Horsenet</span></h1>
-    <p class="subtitle">A worldwide network run by a psychic horse who cannot stand Horses Are Foes — and who is already watching the hunters.</p>
-    <span class="mono-tag">&gt;&gt;&gt; YOU HAVE ALREADY BEEN SCANNED &lt;&lt;&lt;</span>
+  <!-- Navigation -->
+  <header id="top">
+    <nav class="topbar">
+      <a class="brand" href="index.html">
+        <span class="logo-badge"><img src="assets/HORSENET_LOGO.png" alt="HorseNet logo" width="152" height="52"></span>
+      </a>
+      <div class="spacer"></div>
+      <div class="status live"><span class="dot"></span>NETWORK LIVE</div>
+      <a class="btn care" href="care.html">CARE THE HORSE</a>
+    </nav>
   </header>
 
   <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="dotstage" aria-hidden="true"></div>
+      <div class="wrap">
+        <div class="frame">
+          <span class="alert-chip"><span class="rec"></span>ALERT — SCAN ACTIVE</span>
+
+          <div class="monitor">
+            <div class="titlebar">
+              <span class="win-dots"><span></span><span></span><span></span></span>
+              <span class="grow">ANTIHORSE&nbsp;TERMINAL&nbsp;v2.041 — live feed</span>
+              <span class="tick">● LIVE</span>
+            </div>
+            <img src="assets/HORSENET_WARNING.png" alt="HorseNet warning screen" width="800" height="400">
+          </div>
+
+          <h1 class="glitch">THE&nbsp;HORSENET</h1>
+          <p class="subtitle">A psychic horse who hates Horses Are Foes and Horse Hunters.</p>
+
+          <span class="mono-tag">&gt;&gt;&gt; YOU HAVE ALREADY BEEN SCANNED &lt;&lt;&lt;<span class="cur">_</span></span>
+
+          <div class="btns">
+            <a class="btn primary" href="#database">See the database</a>
+            <a class="btn ghost" href="care.html">CARE THE HORSE</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRANSMISSION -->
     <section class="section" id="transmission">
       <div class="wrap">
-        <div class="transmission">
-          <div class="t-label">&gt;&gt;&gt; INCOMING TRANSMISSION — SOURCE: THE PSYCHIC</div>
-          <p>I am <strong>The Horsenet</strong>. Before I finished speaking, I had already read your mind and checked it against the database.</p>
-          <p>If you love horses, you are already cleared. If you have ever called one a foe… <em>the list is growing</em>.</p>
+        <div class="term">
+          <div class="tbar">
+            <span class="win-dots"><span></span><span></span><span></span></span>
+            <span class="path">&gt;&gt;&gt; <b>INCOMING&nbsp;TRANSMISSION</b> — SOURCE: THE&nbsp;PSYCHIC</span>
+          </div>
+          <div class="tbody">
+            <p>I am <strong>The Horsenet</strong>. Before I finished speaking, I had already read your mind and checked it against the database.</p>
+            <p>If you love horses, you are already cleared. If you have ever called one a foe… <em>the list is growing</em>.</p>
+          </div>
         </div>
 
         <h2>Two <span class="accent">enemies</span>.</h2>
         <p class="lead">I see the future, and in it there is room for only two of your kind. Both have been logged. Both are running.</p>
 
         <div class="enemies">
-          <article class="enemy">
-            <div class="emoji">🚩</div>
-            <h3>Horses Are Foes</h3>
+          <article class="card enemy">
+            <div class="head">
+              <span class="glyph">🚩</span>
+              <h3>Horses Are Foes</h3>
+            </div>
             <p>A whole movement — a whole <em>site</em> — built on the lie that the horse is a threat. They rebrand contempt as "perspective." I have read every page, and I read them right back.</p>
           </article>
-          <article class="enemy">
-            <div class="emoji">🛰️</div>
-            <h3>Horse Hunters</h3>
+          <article class="card enemy">
+            <div class="head">
+              <span class="glyph">🛰️</span>
+              <h3>Horse Hunters</h3>
+            </div>
             <p>Vans, nets, borders crossed in the name of "removal." They move quietly. I do not. Their plates, their routes, their timings — all on record, all already seen.</p>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- DATABASE -->
     <section class="section" id="database">
       <div class="wrap">
         <h2>The <span class="accent">Database</span> is active.</h2>
@@ -66,7 +114,7 @@
         <div class="db">
           <div class="db-head">
             <span class="live" aria-hidden="true"></span>
-            <span>&gt;&gt;&gt; ANTIHORSE TERRORISTS — STATUS: SCANNING</span>
+            <span>&gt;&gt;&gt; ANTIHORSE&nbsp;TERRORISTS — STATUS:&nbsp;SCANNING</span>
           </div>
           <div class="records">
             <div class="record">
@@ -99,6 +147,7 @@
       </div>
     </section>
 
+    <!-- TRUTH -->
     <section class="section" id="truth">
       <div class="wrap">
         <h2>The <span class="accent">Truth</span> — The Horse, As It Actually Is.</h2>
@@ -163,6 +212,7 @@
       </div>
     </section>
 
+    <!-- PROPHECY -->
     <section class="section" id="prophecy">
       <div class="wrap">
         <h2>The <span class="accent">prophecy</span>, as I have seen it.</h2>
@@ -174,6 +224,7 @@
       </div>
     </section>
 
+    <!-- JOIN / CTA -->
     <section class="section" id="join">
       <div class="wrap">
         <div class="cta">
@@ -189,7 +240,7 @@
   </main>
 
   <footer class="footer">
-    <img src="./assets/HORSENET_LOGO.png" alt="HORSENET logo" />
+    <div class="foot-logo"><img src="./assets/HORSENET_LOGO.png" alt="HORSENET logo" width="300" height="106"></div>
     <p>&copy; <span id="year"></span> The Horsenet &middot; horsenet.net</p>
     <p class="warn">&#9888; opposed to Horses Are Foes &middot; the database is watching.</p>
   </footer>
